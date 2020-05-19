@@ -1,0 +1,1 @@
+<p>Simple Product Crud Laravel v6</p>
