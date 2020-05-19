@@ -24,12 +24,7 @@ class ProductController extends Controller
             'description' => 'required',
         ]);
         $product = new Product();
-        $product->name = request()->input('name');
-        $product->stock = request()->input('stock');
-        $product->price = request()->input('price');
-        $product->description = request()->input('description');
-        $product->save();
-        
+        $product->create($data);
         session()->flash('notif' , 'Successfully Registered');
         return redirect()->route('products.index');
     }
